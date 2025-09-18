@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sangharshyog</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background: #f4f4f4;
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: #2c3e50;
+			color: #fff;
+			padding: 10px 40px;
+		}
+		.logo {
+			display: flex;
+			align-items: center;
+		}
+		.logo img {
+			height: 50px;
+			margin-right: 15px;
+		}
+		.menu {
+			display: flex;
+			gap: 30px;
+		}
+		.menu a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 18px;
+			transition: color 0.2s;
+		}
+		.menu a:hover {
+			color: #f39c12;
+		}
+		.main {
+			display: flex;
+			margin: 30px 40px 0 40px;
+		}
+		.slideshow {
+			flex: 3;
+			position: relative;
+			height: 350px;
+			background: #fff;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		.slide {
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.slide img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.active {
+			display: block;
+		}
+		.notice-board {
+			flex: 1;
+			margin-left: 30px;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+			padding: 20px;
+			height: 350px;
+			overflow-y: auto;
+		}
+		.notice-board h3 {
+			margin-top: 0;
+			color: #2c3e50;
+		}
+		.notice-board ul {
+			padding-left: 20px;
+		}
+		.footer {
+			background: #2c3e50;
+			color: #fff;
+			padding: 30px 40px 20px 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: 40px;
+		}
+		.footer-links {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		.footer-links a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 16px;
+			transition: color 0.2s;
+		}
+		.footer-links a:hover {
+			color: #f39c12;
+		}
+		.social-media {
+			display: flex;
+			gap: 18px;
+		}
+		.social-media a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			background: #fff;
+			margin-right: 5px;
+			transition: background 0.2s;
+		}
+		.social-media a:hover {
+			background: #f39c12;
+		}
+		.social-media img {
+			width: 22px;
+			height: 22px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo">
+			<span style="font-size: 2rem; font-weight: bold;">Sangharshyog Organisation</span>
+		</div>
+		<nav class="menu">
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</div>
+	<div class="main">
+		<div class="slideshow" id="slideshow">
+			<div class="slide active"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Slide 1"></div>
+			<div class="slide"><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Slide 2"></div>
+			<div class="slide"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Slide 3"></div>
+			<div class="slide"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Slide 4"></div>
+			<div class="slide"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Slide 5"></div>
+		</div>
+		<aside class="notice-board">
+			<h3>Notice Board</h3>
+			<ul>
+				<li>Yoga camp registration open till Sep 30.</li>
+				<li>Annual event on Oct 15, 2025.</li>
+				<li>New meditation classes every Sunday.</li>
+				<li>Volunteers needed for community service.</li>
+				<li>Follow us on social media for updates!</li>
+			</ul>
+		</aside>
+	</div>
+	<footer class="footer">
+		<div class="footer-links">
+			<a href="#">Home</a>
+			<a href="#">Events</a>
+			<a href="#">Gallery</a>
+			<a href="#">Contact</a>
+			<a href="#">Donate</a>
+		</div>
+		<div class="social-media">
+			<a href="https://facebook.com" target="_blank" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+			<a href="https://twitter.com" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+			<a href="https://instagram.com" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+			<a href="https://youtube.com" target="_blank" title="YouTube"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"></a>
+			<a href="https://linkedin.com" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+		</div>
+	</footer>
+	<script>
+		// Simple slideshow JS
+		let currentSlide = 0;
+		const slides = document.querySelectorAll('.slide');
+		setInterval(() => {
+			slides[currentSlide].classList.remove('active');
+			currentSlide = (currentSlide + 1) % slides.length;
+			slides[currentSlide].classList.add('active');
+		}, 3000);
+	</script>
+</body>
+</html>
